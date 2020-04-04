@@ -1,0 +1,13 @@
+name: Trigger Sentinel Run
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  trigger-run:
+    name: Trigger Sentinel Run
+    runs-on: ubuntu-latest
+    steps:
+      - name: Hit Trigger Endpoint
+        uses: codebytere/sentinel-nightly-trigger@v1
