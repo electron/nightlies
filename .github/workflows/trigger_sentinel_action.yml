@@ -11,3 +11,5 @@ jobs:
     steps:
       - name: Hit Trigger Endpoint
         uses: codebytere/sentinel-nightly-trigger@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
